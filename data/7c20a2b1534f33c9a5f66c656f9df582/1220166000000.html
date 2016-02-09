@@ -1,0 +1,1201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app34.us.archive.org";archive_analytics.values.server_ms=355;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<script type="text/javascript">
+</script>
+<meta http-equiv="imagetoolbar" content="no"/>
+<title>Reviews of Hotels, Flights and Vacation Rentals - TripAdvisor</title>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache,must-revalidate"/>
+<meta http-equiv="expires" content="0"/>
+<meta name="keywords" content="vacation, vacations, vacation packages, vacation package, travel package, travel packages, travel, planning, hotel, hotels, motel, bed and breakfast, inn, guidebook, review, reviews, popular, plan, airfare, cheap, discount, map, maps, golf, ski, articles, attractions, advice, restaurants"/>
+<meta name="description" content="TripAdvisor - Unbiased hotel reviews, photos and travel advice for hotels and vacations - Compare prices with just one click."/> <script type="text/javascript">
+(function () { /* ensure that console.log is a valid function */
+if (typeof console == "undefined") console = {};
+var funcs = ["log", "error", "warn"];
+for (var i = 0; i < funcs.length; i++) {
+if (console[funcs[i]] == undefined) {
+console[funcs[i]] = function () {};
+}
+}
+})()
+var pageInit = new Date();
+var jsGlobalMonths =   new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+var jsGlobalDaysAbbrev =   new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+var jsGlobalDaysShort =   new Array("S","M","T","W","T","F","S");
+var sInvalidDates = "The dates you entered are invalid. Please correct your dates and search again.";
+var sSelectDeparture = "Please select a departure airport.";
+var DATE_FORMAT_MMM_YYYY = "MMM YYYY";
+var jsGlobalDayOffset = 1 - 1;
+var DATE_FORMAT = { pattern: /(\d{1,2})\/(\d{1,2})\/(\d{2,4})/, month: 1, date: 2, year: 3 };
+var formatDate = function(d, m, y) {return [++m,d,y].join("/");}
+var cal_month_header = function(month, year) {return cal_months[month]+"&nbsp;"+year;}
+var currencyLevel = new Array();
+var currencySymbol = new Array();
+var cur_prefix = false;
+var cur_postfix = true;
+currencySymbol["USD"] = new Array("$", false);
+currencyLevel["USD"] = new Array("Any Price","9999999" ,"Under $100","100" ,"Under $200","200" ,"Under $300","300" );
+currencySymbol["EUR"] = new Array("€", false);
+currencyLevel["EUR"] = new Array("Any Price","9999999" ,"Under €75","75" ,"Under €150","150" ,"Under €225","225" );
+currencySymbol["GBP"] = new Array("£", false);
+currencyLevel["GBP"] = new Array("Any Price","9999999" ,"Under £50","50" ,"Under £100","100" ,"Under £150","150" );
+currencySymbol["CAD"] = new Array("CAD ", false);
+currencyLevel["CAD"] = new Array("Any Price","9999999" ,"Under CAD 100","100" ,"Under CAD 200","200" ,"Under CAD 300","300" );
+currencySymbol["AUD"] = new Array("AUD ", false);
+currencyLevel["AUD"] = new Array("Any Price","9999999" ,"Under AUD 100","100" ,"Under AUD 200","200" ,"Under AUD 300","300" );
+currencySymbol["CHF"] = new Array("CHF ", false);
+currencyLevel["CHF"] = new Array("Any Price","9999999" ,"Under CHF 100","100" ,"Under CHF 200","200" ,"Under CHF 300","300" );
+currencySymbol["JPY"] = new Array("JPY", false);
+currencyLevel["JPY"] = new Array("Any Price","9999999" ,"Under JPY10000","10000" ,"Under JPY20000","20000" ,"Under JPY30000","30000" );
+currencySymbol["RMB"] = new Array("CNY", false);
+currencyLevel["RMB"] = new Array("Any Price","9999999" ,"Under CNY700","700" ,"Under CNY1400","1400" ,"Under CNY2000","2000" );
+currencySymbol["INR"] = new Array("INR", false);
+currencyLevel["INR"] = new Array("Any Price","9999999" ,"Under INR4000","4000" ,"Under INR8000","8000" ,"Under INR12000","12000" );
+currencySymbol["SEK"] = new Array("SEK", false);
+currencyLevel["SEK"] = new Array("Any Price","9999999" ,"Under SEK500","500" ,"Under SEK1000","1000" ,"Under SEK1500","1500" );
+currencySymbol["BRL"] = new Array("R$", false);
+currencyLevel["BRL"] = new Array("Any Price","9999999" ,"Under R$200","200" ,"Under R$400","400" ,"Under R$600","600" );
+currencySymbol["TRY"] = new Array("TL", false);
+currencyLevel["TRY"] = new Array("Any Price","9999999" ,"Under TL200","200" ,"Under TL400","400" ,"Under TL600","600" );
+currencySymbol["DKK"] = new Array("kr.", false);
+currencyLevel["DKK"] = new Array("Any Price","9999999" ,"Under kr.500","500" ,"Under kr.1000","1000" ,"Under kr.1500","1500" );
+currencySymbol["MXN"] = new Array("MXN", false);
+currencyLevel["MXN"] = new Array("Any Price","9999999" ,"Under MXN1000","1000" ,"Under MXN2000","2000" ,"Under MXN3000","3000" );
+currencySymbol["NOK"] = new Array("NOK", false);
+currencyLevel["NOK"] = new Array("Any Price","9999999" ,"Under NOK600","600" ,"Under NOK1200","1200" ,"Under NOK1800","1800" );
+currencySymbol["PLN"] = new Array("PLN", false);
+currencyLevel["PLN"] = new Array("Any Price","9999999" ,"Under PLN300","300" ,"Under PLN600","600" ,"Under PLN900","900" );
+currencySymbol["SGD"] = new Array("S$", false);
+currencyLevel["SGD"] = new Array("Any Price","9999999" ,"Under S$100","100" ,"Under S$200","200" ,"Under S$300","300" );
+currencySymbol["THB"] = new Array("THB", false);
+currencyLevel["THB"] = new Array("Any Price","9999999" ,"Under THB4000","4000" ,"Under THB8000","8000" ,"Under THB12000","12000" );
+currencySymbol["KRW"] = new Array("KRW", false);
+currencyLevel["KRW"] = new Array("Any Price","9999999" ,"Under KRW100000","100000" ,"Under KRW200000","200000" ,"Under KRW300000","300000" );
+var groupingSize = 3;
+var groupingSeparator = ",";
+var JS_location_not_found = "Your location not found.";
+var JS_click_to_expand = "Click to Expand";
+var JS_choose_valid_city = "Please choose a valid city from the list.";
+var JS_select_a_cruise_line = "Please select a cruise line.";
+var JS_loading = "Loading ...";
+var JS_Ajax_failed="We're sorry, but there was a problem retrieving the content. Please check back in a few minutes.";
+var JS_maintenance="Our site is currently undergoing maintenance.\n\nWe're sorry for the inconvenience... we'll be back soon."; var JS_Stop_search = "stop search";
+var JS_Resume_search = "Resume search";
+var JS_Thankyou = "Thank you";
+var JS_DateFormat = "mm/dd/yyyy";
+var JS_review_lost = "Your review will be lost.";
+var JS_coppa_sorry = "We're sorry....";
+var JS_coppa_privacy = "Based on information you submitted, your TripAdvisor account does not meet the requirements of our <a href='/pages/privacy.html'>Privacy Policy</a>.";
+var JS_coppa_deleted = "Your account has been deleted.";
+var JS_close = "Close";
+var JS_close_image = "/web/20100831163856/http://cdn.tripadvisor.com/img2/buttons/closeButton.gif";
+var JS_CHANGES_SAVED = "Changes saved";
+var JS_community_on = "Community has been enabled";
+var lang_Close = JS_close;
+var JS_UpdatingYourResults = "Updating your results &#8230;";
+var JS_OwnerPhoto_heading = "Thank you for submitting your request to TripAdvisor. ";
+var JS_OwnerPhoto_subheading = "We process most listings and changes within 5 business days. ";
+var JS_OwnerPhoto_more = "Add more photos to your listing";
+var JS_OwnerPhoto_return = "Return to your Owner’s Center";
+var js_0001 = "Please select at least one vendor from the list."; var js_0002 = "Please choose dates in the future."; var js_0003 = "Please choose a check-out date that is at least one day later than your check-in date."; var js_0004 = "Please choose dates that are less than 330 days away."; var js_0005 = "Searching for deals ... this may take a few moments"; var js_0006 = "Your selections have not changed."; var js_0010 = "Please click again to open each window or adjust browser settings to disable popup blockers."; var js_0011 = "Update"; var js_0012 = "Show next offer"; var js_0013 = "Please click the \"Check Rates!\" button above to open each window."; var js_0014 = 'Opens one window for each offer. Please disable pop-up blockers.';
+var js_0015 = 'Compare prices';
+var js_invalid_dates_text = "The dates entered are invalid. Please correct your dates and search again."; var qcErrorImage = '<center><img src="/web/20100831163856/http://cdn.tripadvisor.com/img/action_required_blinking.gif" /></center>';
+var selectedHotelName = ""; var cr_loc_vend = '/web/20100831163856/http://cdn.tripadvisor.com/img2/checkrates/cr.gif';
+var cr_loc_vend_ch = '/web/20100831163856/http://cdn.tripadvisor.com/img2/checkrates/cr_check.gif';
+var cr_loc_logo = '/web/20100831163856/http://cdn.tripadvisor.com/img2/checkrates/logo.gif';
+var cd_loc_vend = '/web/20100831163856/http://cdn.tripadvisor.com/img2/checkrates/cd.png';
+var cd_loc_vend_ch = '/web/20100831163856/http://cdn.tripadvisor.com/img2/checkrates/cd_check.png';
+var JS_Any_Date = "Any Date";
+var JS_Update_List = "Update List";
+var sNexusTitleMissing = "The title must be populated";
+var JS_Challenge="Challenge";
+var JS_TIQ_Level="Level";
+var JS_TIQ="Travel IQ";
+var JS_TIQ_Pts="pts";
+var RATING_STRINGS = [
+"Click to rate",
+"Terrible",
+"Poor",
+"Average",
+"Very Good",
+"Excellent"
+];
+var addOverlayCloseClass = "";
+var isOverlayServlet = "";
+var IS_OVERLAY_DEBUG = "false";
+var IS_MPU_ENABLED = false;
+var IS_DDPU_ENABLED = false
+var IS_AWPU_ENABLED = true;
+var IS_LPU_ENABLED = false;
+var IS_UPU_ENABLED = false;
+var blockPU =  true;
+var overlayLightbox = false;
+if("" != "")
+{
+overlayLightbox = true;
+}
+var overlayOptions = "";
+var overlayBackupLoc = "40827";
+var gmapDomain = "maps.google.com";
+var serverPool = "A";
+var reg_overhaul = true;
+var wof_pm_send = "Send";
+var wof_pm_preview = "Preview";
+var wof_pm_your_message_will_be_sent_to_someone_by_email = "Your message will be sent to 12345 by e-mail.";
+var wof_pm_your_message_will_be_sent_to_someone_on_facebook = "Your message will be sent to 12345 on Facebook.";
+var wof_streampublish_caption = "{*actor*} is exploring 12345 on TripAdvisor and is looking for your advice.";
+var wof_lightbox_whats_on_your_mind = "What's on your mind?";
+var wof_lightbox_map_your_travels = "Map your travels";
+var wof_lightbox_somewhere_on_tripadvisor = "12345 on TripAdvisor";
+var hideOnLoad = new Array();
+var IS_DEBUG = false;
+var CDNHOST = "/web/20100831163856/http://cdn.tripadvisor.com";
+var VERSION_MAP = {
+}
+var cookieDomain = ".tripadvisor.com";
+var modelLocaleCountry = "US";
+var ipCountryId = "191";
+var pageServlet = "Home";
+var crPageServlet = "Home";
+var cdnHost = "/web/20100831163856/http://cdn.tripadvisor.com";
+var arrowLeft     = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/saveIconArrowLeft.gif";
+var arrow         = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/saveIconArrow.gif";
+var example       = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/saveButtonExample.gif";
+var save          = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/folderSave.gif";
+var closedSub     = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/closedForSubfolder.gif";
+var closedFolder  = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/closedFolder.gif";
+var openFolder    = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/openFolder.gif";
+var add           = "/web/20100831163856/http://cdn.tripadvisor.com/img/saves/addFolder.gif";
+var userLoggedIn = false;
+var migrationMember = false;
+var savesEnable = true;
+var savesJS = '/web/20100831163856/http://cdn.tripadvisor.com/js2/saves-v3271511395a.js';
+var flagsUrl = '/';
+var flagsSettings = [
+];
+var lang_Close  = "Close";
+var img_loop    = "/web/20100831163856/http://cdn.tripadvisor.com/img2/generic/site/loop.gif";
+var communityEnabled = true
+var footerFlagFormat = "";
+var modelLocId = "";
+var gClient = 'gme-expedia';
+var gKey = '';
+var gLang = '';
+var mapsJs = '/web/20100831163856/http://cdn.tripadvisor.com/js2/ta_maps-v1670355009a.js';
+var mapsJsLite = '/web/20100831163856/http://cdn.tripadvisor.com/js2/lib/extensions/TAMap-v2825536320a.js';
+var memoverlayCSS = '/web/20100831163856/http://cdn.tripadvisor.com/css2/pages/memberoverlay-v393415179a.css';
+var wiFriHasMember =  false  ;
+var cpu_enabled = true;
+</script>
+<script type="text/javascript" src="/web/20100831163856js_/http://cdn.tripadvisor.com/js2/tripadvisor-v314774081a.js"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript" src='/web/20100831163856js_/http://cdn.tripadvisor.com/js2/ta-home-nc-v3304377211a.js'></script>
+<link rel="stylesheet" type="text/css" media="screen, print" href="/web/20100831163856cs_/http://cdn.tripadvisor.com/css2/universal-v1324612650a.css"/>
+<link rel="stylesheet" type="text/css" media="screen, print" href="/web/20100831163856cs_/http://cdn.tripadvisor.com/css2/home-v3467742647a.css"/>
+<!--[if IE 6]>
+      <link rel="stylesheet" type="text/css" media="screen, print" href="/web/20100831163856/http://cdn.tripadvisor.com/css2/winIE6-v4137420190a.css" />
+            <![endif]-->
+<!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" media="screen, print" href="/web/20100831163856/http://cdn.tripadvisor.com/css2/winIE7-v2880089664a.css" />
+            <![endif]-->
+<style type="text/css">
+body{}
+</style>
+<!-- web09a.tripadvisor.com -->
+<!-- PRODUCTION -->
+<!-- PRODUCTION -->
+<script type="text/javascript" src="/web/20100831163856js_/http://cdn.tripadvisor.com/js2/trsupp-v1577018553a.js"></script>
+</head>
+<body class="domn_en_US">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.tripadvisor.com/";
+
+var firstYear = 1996;
+var displayDay = "31";
+var displayMonth = "Aug";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(525, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.tripadvisor.com/" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20100831163856" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20100728111042/http://www.tripadvisor.com/" title="28 Jul 2010">JUL</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 16:38:56 Aug 31, 2010">AUG</td>
+		<td class="f" nowrap="nowrap">
+		
+		    <a href="/web/20101001083741/http://www.tripadvisor.com/" title="1 Oct 2010"><strong>OCT</strong></a>
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20100829100233/http://www.tripadvisor.com/" title="10:02:33 Aug 29, 2010"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 16:38:56 Aug 31, 2010">31</td>
+	       <td class="f" nowrap="nowrap">
+               
+		   <a href="/web/20100902182236/http://www.tripadvisor.com/" title="18:22:36 Sep 2, 2010"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a>
+	       
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20090830105310/http://www.tripadvisor.com/" title="30 Aug 2009"><strong>2009</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 16:38:56 Aug 31, 2010">2010</td>
+	       <td class="f" nowrap="nowrap">
+               
+	           <a href="/web/20110831184233/http://www.tripadvisor.com/" title="31 Aug 2011"><strong>2011</strong></a>
+	       
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20100831163856*/http://www.tripadvisor.com/" title="See a list of every capture for this URL">10,991 captures</a>
+           <div class="r" title="Timespan for captures of this URL">21 Aug 00 - 9 Feb 16</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="525"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=525_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000010210_2001:-1:003111000000_2002:-1:000102014140_2003:-1:021111211222_2004:-1:100218988787_2005:-1:89989aab888a_2006:-1:b84925665456_2007:-1:700488788988_2008:-1:878676888647_2009:-1:687787676767_2010:7:776676785777_2011:-1:8988877868aa_2012:-1:abb9aabaa9bc_2013:-1:ccbbbabaa9de_2014:-1:fdeeeeeeeeee_2015:-1:ecdcac9c9cde_2016:-1:ea0000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript">
+function initSaves()
+{
+SV_DEFAULT_FOLDER_NAME = "My Trip";
+if (SV_DEFAULT_FOLDER_NAME.length > $('savesWidgetNewFolder').maxLength) {
+SV_DEFAULT_FOLDER_NAME = "My Trip";
+}
+SV_IS_POPUP = 0;
+}
+</script>
+<div id="iframediv"></div>
+<div id="PAGE">
+<div id="HEAD" class="globalNav">
+<div class="identity_rd">
+<span class="topLogo">
+<img src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/branding/idHead_Default.png" height="30" alt="Reviews of Hotels, Flights and Vacation Rentals"/>
+</span>
+</div>
+<div class="tabsBar">
+<ul class="tabs sprite-gradientGrn">
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/" class="tabLink sprite-tabPipe pid1571" rel="nofollow">Home</a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels" class="tabLink sprite-tabPipe pid2972">Hotels</a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/Flights" class="tabLink sprite-tabPipe" onclick="setPID(1940)">Flights</a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/Restaurants" class="tabLink sprite-tabPipe pid2973">Restaurants</a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/VacationRentals" class="tabLink sprite-tabPipe pid2795"><span class="newItem">Vacation Rentals</span><img class="newStub sprite-newStub" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="NEW!"/></a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/Inspiration" class="tabLink sprite-tabPipe pid1337" rel="nofollow">Trip Ideas</a></li>
+<li class="tabItem"><a href="/web/20100831163856/http://www.tripadvisor.com/UserReview-e__2F__" class="tabLink sprite-tabPipe pid1434 " rel="nofollow">Write a Review</a></li> </ul> </div>
+<div class="srchBar">
+<div class="navSrch" id="SEARCH_LHN">
+<form method="get" action="/web/20100831163856/http://www.tripadvisor.com/Search" onsubmit="return ta.call('ta.common.search.validate',event);">
+<fieldset>
+<input id="mainSearch" type="text" name="q" class="  text focusClear" onfocus="return ta.call('ta.common.search.clearOnFocus',event);" onblur="return ta.call('ta.common.search.defaultOnBlur',event);" value="City, hotel name, etc."/>
+<div class="button"><input id="mainSearchSubmit" type="submit" name="sub-search" class="submit" value="Search" title="Search"/></div>
+<input type="hidden" name="geo" value=""/>
+<input type="hidden" name="where" value="nav"/>
+<input type="hidden" name="returnTo" value="__2F__"/>
+</fieldset>
+</form>
+</div>
+<img class="sprite-punchline" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="Over 35 million trusted traveler reviews & opinions"/>
+</div>
+</div>
+<div id="HOMEPAGE">
+<!--/ IS_JA-->
+<div class="gridA">
+<div class="sidebar">
+<div class="ad">
+<!-- Ad tags: doubleclick
+domain=ad.doubleclick.net
+site=ta.ta.com.s
+zone=homepage
+mcid=10556
+PageType=Home
+pool=A
+pos=top
+u=Home%7CA
+rd=com
+hcm=false
+sz=300X250
+tile=1
+ord=21499227
+area=Home
+
+-->
+<div class="adServer dom_en_US">
+<div class="details" id="adiframe1" style="display: none">
+<script> var adiframe1 = "ad.doubleclick.net+ta.ta.com.s+homepage+250+300+Home+mcid=10556;PageType=Home;pool=A;pos=top;u=Home%7CA;rd=com;abr=!webtv;hcm=false;sz=300X250;tile=1;ord=21499227"; adpHtml = "adp/adp-v3729954996a.html"
+</script>
+</div>
+<noscript>
+<!-- for non JavaScript browsers and Netscape 2.x -->
+<a href="/web/20100831163856/http://ad.doubleclick.net/jump/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;pos=top;u=Home%7CA;rd=com;hcm=false;sz=300X250;tile=1;ord=21499227" rel="nofollow">
+<img src="/web/20100831163856im_/http://ad.doubleclick.net/ad/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;pos=top;u=Home%7CA;rd=com;hcm=false;sz=300X250;tile=1;ord=21499227" width="300" height="250" border="0">
+</a>
+</noscript>
+</div>
+</div>
+<div class="box typeB browseDest">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="homeHeader">Browse by Destination</div> <div class="interior">
+<div class="cnrR3">
+<div class="lft"><!--Lft Corner--></div>
+<div class="rgt"><!--Rgt Corner--></div>
+</div>
+<ul class="destMap">
+<li class="lozCAN"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g153339-Canada-Vacations.html">Canada</a></li>
+<li class="lozUSA"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g191-United_States-Vacations.html">United States</a></li>
+<li class="lozCAR"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147237-Caribbean-Vacations.html">Caribbean</a></li>
+<li class="lozMEX"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g150768-Mexico-Vacations.html">Mexico</a></li>
+<li class="lozCAM"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g291958-Central_America-Vacations.html">Central America</a></li>
+<li class="lozSAM"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g13-South_America-Vacations.html">South America</a></li>
+<li class="lozEUR"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g4-Europe-Vacations.html">Europe</a></li>
+<li class="lozASA"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g2-Asia-Vacations.html">Asia</a></li>
+<li class="lozMDE"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g21-Middle_East-Vacations.html">Middle East</a></li>
+<li class="lozAFR"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g6-Africa-Vacations.html">Africa</a></li>
+<li class="lozSPC"><a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g8-South_Pacific-Vacations.html">South Pacific</a></li>
+</ul>
+</div><!--/ interior-->
+</div><!--/ box.typeB  - Destination Map -->
+<div class="ad">
+<!-- Ad tags: doubleclick
+domain=ad.doubleclick.net
+site=ta.ta.com.s
+zone=homepage
+mcid=10556
+PageType=Home
+pool=A
+pos=bottom
+u=Home%7CA
+rd=com
+hcm=false
+sz=300X250
+tile=2
+ord=21499227
+area=Home
+
+-->
+<div class="adServer dom_en_US">
+<div class="details" id="adiframe2" style="display: none">
+<script> var adiframe2 = "ad.doubleclick.net+ta.ta.com.s+homepage+250+300+Home+mcid=10556;PageType=Home;pool=A;pos=bottom;u=Home%7CA;rd=com;abr=!webtv;hcm=false;sz=300X250;tile=2;ord=21499227"; adpHtml = "adp/adp-v3729954996a.html"
+</script>
+</div>
+<noscript>
+<!-- for non JavaScript browsers and Netscape 2.x -->
+<a href="/web/20100831163856/http://ad.doubleclick.net/jump/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;pos=bottom;u=Home%7CA;rd=com;hcm=false;sz=300X250;tile=2;ord=21499227" rel="nofollow">
+<img src="/web/20100831163856im_/http://ad.doubleclick.net/ad/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;pos=bottom;u=Home%7CA;rd=com;hcm=false;sz=300X250;tile=2;ord=21499227" width="300" height="250" border="0">
+</a>
+</noscript>
+</div>
+</div>
+<div class="ad">
+<!-- Ad tags: doubleclick
+domain=ad.doubleclick.net
+site=ta.ta.com.s
+zone=homepage
+mcid=10556
+PageType=Home
+pool=A
+u=Home%7CA
+rd=com
+hcm=false
+sz=300X300
+tile=3
+ord=21499227
+area=Home
+
+-->
+<div class="adServer dom_en_US">
+<div class="details" id="adiframe3" style="display: none">
+<script> var adiframe3 = "ad.doubleclick.net+ta.ta.com.s+homepage+300+300+Home+mcid=10556;PageType=Home;pool=A;u=Home%7CA;rd=com;abr=!webtv;hcm=false;sz=300X300;tile=3;ord=21499227"; adpHtml = "adp/adp-v3729954996a.html"
+</script>
+</div>
+<noscript>
+<!-- for non JavaScript browsers and Netscape 2.x -->
+<a href="/web/20100831163856/http://ad.doubleclick.net/jump/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;u=Home%7CA;rd=com;hcm=false;sz=300X300;tile=3;ord=21499227" rel="nofollow">
+<img src="/web/20100831163856im_/http://ad.doubleclick.net/ad/ta.ta.com.s/homepage;mcid=10556;PageType=Home;pool=A;u=Home%7CA;rd=com;hcm=false;sz=300X300;tile=3;ord=21499227" width="300" height="300" border="0">
+</a>
+</noscript>
+</div>
+</div>
+<div class="bx01 celeb">
+<div class="content">
+<div class="hdr">VIP Survey</div>
+<p>TripAdvisor asks Kelly Rowland - What's your favorite hotel?</p>
+<div class="celebinfo wrap">
+<img class="fl" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/celebritybox/kelly-rowland.jpg" width="100" border="0" alt="Kelly Rowland"/>
+<div class="celebquote">
+<a rel="nofollow" href="Hotel_Review-g187147-d305850" class="pid2894">Hotel de Sers</a> in Paris. The service is amazing, and their cheesecake is perfection-- best in the world!<br>
+<a rel="nofollow" target="_blank" class="pid2761" href="/web/20100831163856/http://www.tripadvisor.com/ShowUrl-a_url.http%3A__2F____2F__tripadvisor__2E__wordpress__2E__com__2F__vip__2D__survey__2D__kelly__2D__rowland__2F__">Read our full interview</a>
+</div>
+</div>
+<div class="celebarchive">
+Read more VIP Survey responses in our <a rel="nofollow" target="_blank" class="pid2762" href="/web/20100831163856/http://www.tripadvisor.com/ShowUrl-a_url.http%3A__2F____2F__tripadvisor__2E__wordpress__2E__com__2F__celebrity__2D__archive__2F__">archive</a>.
+</div>
+</div>
+</div>
+<div>
+<span class="dsrc">uvpages/home/sidebar</span> </div>
+<div class="box typeA2 goLists">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="mid"><!--Mid Border--></div> <div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="interior">
+<div class="boxHead">
+<h3 class="wrap">
+<span><a rel="nofollow" title="Westin" class="js_popup sz1005x675" href="/web/20100831163856/http://ad.doubleclick.net/clk;227148860;50910931;f?http://clk.atdmt.com/NYC/go/241053613/direct;wi.1;hi.1/01/"><img class="sprLogo" alt="Sponsored by: Westin" height="27" width="161" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif"/></a></span>
+Traveler Lists
+</h3>
+</div>
+<div class="wrap">
+<div class="subHead">Recent Traveler Lists</div>
+<ul>
+<li>
+<a href="/web/20100831163856/http://www.tripadvisor.com/GoListDetail-i22271-Myrtle_Beach.html" rel="nofollow">Myrtle Beach</a>
+<cite><span>Jun 10, 2010</span> <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/members-golists/txp188">txp188</a></cite>
+</li>
+<li>
+<a href="/web/20100831163856/http://www.tripadvisor.com/GoListDetail-i21586-Holmes_County_Ohio_Amish_Country.html" rel="nofollow">Holmes County Ohio Amish Country</a>
+<cite><span>Mar 10, 2010</span> <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/members-golists/ohiobedandbreakfast">ohiobedandbreakfast</a></cite>
+</li>
+</ul>
+<div class="ctaNewList button"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/NewGoList">Create a list now</a></div>
+</div>
+<div class="boxGraphic">
+<a rel="nofollow" title="Westin" class="linkSponsor js_popup sz1005x675" href="/web/20100831163856/http://ad.doubleclick.net/clk;227148860;50910931;f?http://clk.atdmt.com/NYC/go/241053613/direct;wi.1;hi.1/01/"></a>
+</div>
+</div><!--/interior-->
+</div><!--/goLists-->
+<img id='lazyload_UNIQUE_0' height='1' alt='' width='1' class='tracking'/>
+</div><!--/ sidebar-->
+<div class="balance">
+<div class="perfecttrip">
+<h1>Plan the Perfect Trip</h1> <div class="wrapA">
+<div class="wrapB">
+<div class="wrapC">
+<div class="tabContainer " id="TAB_CONTAINER">
+<div class="tabContainerHead">
+<h2 id="hac" class="tab tab0 hvrIE6 current hac"><div class="labelContainer"><div class="label">Hotels</div></div></h2>
+<h2 id="flights" class="tab tab1 hvrIE6 flights"><div class="labelContainer"><div class="label">Flights</div></div></h2>
+<h2 id="restaurants" class="tab tab2 hvrIE6 xhr restaurants"><a class="pid3210" href="/web/20100831163856/http://www.tripadvisor.com/vpages/home/restaurant_tab.html?lt=evt&amp;log=false" rel="nofollow"><div class="labelContainer"><div class="label">Restaurants</div></div></a></h2>
+<h2 id="t2d" class="tab tab3 hvrIE6 xhr t2d"><a class="pid3210" href="/web/20100831163856/http://www.tripadvisor.com/vpages/home/attraction_tab.html?lt=evt&amp;log=false" rel="nofollow"><div class="labelContainer"><div class="label">Things to Do</div></div></a></h2>
+<h2 id="cruisecritic" class="tab tab4 hvrIE6 xhr cruisecritic"><a class="pid2765" href="/web/20100831163856/http://www.tripadvisor.com/vpages/home/cruises_tab.html?lt=evt&amp;log=false" rel="nofollow"><div class="labelContainer"><div class="label">Cruises</div></div></a></h2>
+<h2 id="vacationrentalsNew" class="tab tab5 hvrIE6 xhr vacationrentalsNew"><a class="pid3035" href="/web/20100831163856/http://www.tripadvisor.com/HomeTab" rel="nofollow"><div class="labelContainer"><div class="label">Vacation Rentals</div></div></a></h2>
+<h2 id="forums" class="tab tab6 hvrIE6 xhr forums"><a class="pid3036" href="/web/20100831163856/http://www.tripadvisor.com/vpages/home/forums_tab.html?lt=evt&amp;log=false" rel="nofollow"><div class="labelContainer"><div class="label">Forums</div></div></a></h2>
+</div>
+<div class="tabContainerBody">
+<div class="tabContent">
+<form class="hacForm" id="HAC_FORM" name="HAC_FORM" method="get" action="/web/20100831163856/http://www.tripadvisor.com/HACSearch">
+<fieldset>
+<div class="legend">Find Hotels Travelers Trust</div> <span class="error_msg sprite-error_icon-gif">test</span>
+<div id="hac_geo" class="wrap location">
+<label for="hacGeo">City:</label> <input name="geo" id="geo" type="hidden" value=""/>
+<input name="q" id="hacGeo" type="text" class="text typeAhead actGEO onSel-homeHacGeoChanged" autocomplete="off" value=""/>
+</div>
+<div class="wrap availability dualCal">
+<span class="cal first">
+<input type="hidden" class="day" name="inDay" id="inDay" value="3"/>
+<input type="hidden" class="month" name="inMonth" id="inMonth" value="09/2010"/>
+<label for="checkIn">Check-in:</label> <input name="checkIn" id="checkIn" class="text" type="text" value="9/3/2010" onfocus="ta.overlays.createPairedCalendar(event, this);"/>
+<i class="eg">mm/dd/yyyy</i> </span>
+<span class="cal">
+<input type="hidden" class="day" name="outDay" id="outDay" value="5"/>
+<input type="hidden" class="month" name="outMonth" id="outMonth" value="09/2010"/>
+<label for="checkOut">Check-out:</label> <input name="checkOut" id="checkOut" class="text" type="text" value="9/5/2010" onfocus="ta.overlays.createPairedCalendar(event, this);"/>
+<i class="eg">mm/dd/yyyy</i> </span>
+<span class="ppl">
+<label for="adults">Adults:</label> <select name="adults" id="adults">
+<option value="1">1</option>
+<option value="2" selected>2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+</span>
+</div>
+<div class="wrpBtn"><div class="button"><input type="submit" onclick="" value="Find Hotels"/></div></div> </fieldset>
+</form>
+</div>
+<div class="tabContent">
+<form class="FLIGHT_FORM_META" id="FLIGHT_FORM_META" name="AirfareAvailabilityComparisonForm" method="GET" action="/web/20100831163856/http://www.tripadvisor.com/CheapFlights">
+<input type="hidden" name="roundtrip" value="yes"/>
+<fieldset class="flightDetails">
+<legend>Find the Cheapest Flights</legend> <div class="wrap">Find the lowest fares the most often with TripAdvisor.</div>
+<div class="fldst">
+<div>
+<label for="metaFlightFrom">From:</label> <input type="hidden" id="metaFlightFromCode" name="Orig" value="NYC"/>
+<input type="text" id="metaFlightFrom" class="text flightTypeAhead haltIfEmpty" value="New York City, NY - All Airports (NYC)" autocomplete="off" tabindex="1"/>
+</div>
+<div class="dates wrap">
+<label for="checkIn">Depart:</label> <span id="metaCheckInSpan" class="cal first">
+<input type="hidden" class="day" name="leaveday" id="leaveDay" value="14"/>
+<input type="hidden" class="month" name="leavemonth" id="leaveMonth" value="09/2010"/>
+<input class="text" id="checkIn" type="text" value="9/14/2010" tabindex="3" onfocus="ta.overlays.createPairedCalendar(event, this);"/>
+<i class="eg">mm/dd/yyyy</i> </span>
+<select id="leaveTime" name="leavetime" tabindex="4" onfocus="HomeFFM.hideCalendar()">
+<option value="anytime">Anytime</option> <option value="early">Early Morning</option> <option value="morning">Morning</option> <option value="afternoon">Afternoon</option> <option value="evening">Evening</option> <option value="night">Night</option> </select>
+</div><!-- /dates -->
+</div><!-- /fldst -->
+<div class="fldst rhs">
+<div>
+<label for="metaFlightTo">To:</label> <input type="hidden" id="metaFlightToCode" name="Dest" value=""/>
+<input type="text" id="metaFlightTo" class="text flightTypeAhead haltIfEmpty" value="" autocomplete="off" tabindex="2"/>
+</div>
+<div class="dates wrap">
+<label for="checkOut">Return:</label> <span id="metaCheckOutSpan" class="cal">
+<input type="hidden" class="day" name="retday" id="retDay" value="21"/>
+<input type="hidden" class="month" name="retmonth" id="retMonth" value="09/2010"/>
+<input class="text" id="checkOut" type="text" value="9/21/2010" tabindex="5" onfocus="ta.overlays.createPairedCalendar(event, this);"/>
+<i class="eg">mm/dd/yyyy</i> </span>
+<select id="retTime" name="rettime" tabindex="6" onfocus="HomeFFM.hideCalendar()">
+<option value="anytime">Anytime</option> <option value="early">Early Morning</option> <option value="morning">Morning</option> <option value="afternoon">Afternoon</option> <option value="evening">Evening</option> <option value="night">Night</option> </select>
+</div><!-- /dates -->
+</div><!-- /fldst -->
+<div class="options">
+<label for="adults">Travelers:</label> <select class="select" name="adults" id="adults" onfocus="HomeFFM.hideCalendar()">
+<option value="1">1</option>
+<option value="2" selected="selected">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<span>
+<input id="nonstopOnly" class="checkbox alt" type="checkbox" name="nonstop" onfocus="HomeFFM.hideCalendar()"/>
+<label for="nonstopOnly">Prefer nonstop</label> </span>
+</div>
+<div>
+<div class="button">
+<input type="submit" value="Find Flights" onclick="setPID(1939); $('FLIGHT_FORM_META').action='/CheapFlights'"/>
+</div>
+<span class="moreOptions">
+<a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Flights" onclick="return HomeFFM.moreOptionsSubmit('more');">MORE OPTIONS</a> &raquo; (<a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Flights" onclick="return HomeFFM.moreOptionsSubmit('oneway')">One-way</a>, <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Flights" onclick="return HomeFFM.moreOptionsSubmit('multicity')">multi-city</a>, etc).
+</span>
+</div>
+</fieldset>
+</form>
+</div>
+<div class="tabContent"></div>
+<div class="tabContent"></div>
+<div class="tabContent" id="CCTAB"></div>
+<div class="tabContent vacationrentals"></div>
+<div class="tabContent" id="FORUM_TAB"></div>
+</div>
+</div>
+</div><!--/ wrapC-->
+</div><!--/ wrapB-->
+</div><!--/ wrapA-->
+</div><!--/ perfecttrip-->
+<div id="VRP_US" class="box vrpV3">
+<a href="/web/20100831163856/http://www.tripadvisor.com/VacationRentals" class="pid3239">
+<img alt="Find a vacation rental" height="74" width="288" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/banners/vr_apr10/v3_ani.gif"/>
+</a>
+</div>
+<div id="pollMix" class="colgroup hasPoll">
+<span class="cnrTL"></span>
+<span class="cnrTR"></span>
+<div class="rantsRaves">
+<h5>Rants &amp; Raves:</h5>
+<h6>The best and worst revealed</h6>
+<div class="review">
+<div class="photo"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Hotel_Review-g187323-d248857-Reviews-The_Mandala_Hotel-Berlin.html" class="pid886"><img src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/icons/64/thumbs_up-v3.gif"/></a></div>
+<div class="property">
+<span class="title"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Hotel_Review-g187323-d248857-Reviews-The_Mandala_Hotel-Berlin.html" class="pid886">The Mandala Hotel</a></span>
+<span class="location">Berlin, Germany </span>
+<img src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/ratings/traveler/s5.0.gif" alt="5.0 of 5 stars" class="rsImg"/>
+</div>
+<p>"Stylish, sexy yet serene setting. This hotel is heaven." <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/ShowUserReviews-g187323-d248857-r54704559-The_Mandala_Hotel-Berlin.html" class="pid886">more</a></p>
+<cite class="byline">By <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/members/geeketchic">geeketchic</a></cite>
+</div><!--/ review-->
+<div class="review">
+<div class="photo"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Hotel_Review-g32847-d280332-Reviews-Cambridge_Inn-Palm_Springs_California.html" class="pid886"><img src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/icons/64/thumbs_down-v3.gif"/></a></div>
+<div class="property">
+<span class="title"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Hotel_Review-g32847-d280332-Reviews-Cambridge_Inn-Palm_Springs_California.html" class="pid886">Cambridge Inn</a></span>
+<span class="location">Palm Springs </span>
+<img src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/ratings/traveler/s1.0.gif" alt="1.0 of 5 stars" class="rsImg"/>
+</div>
+<p>"I should have spent another $20.00 and stayed in a real hotel." <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/ShowUserReviews-g32847-d280332-r55469841-Cambridge_Inn-Palm_Springs_California.html" class="pid886">more</a></p>
+<cite class="byline">By <a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/members/morsus1">morsus1</a></cite>
+</div><!--/ review-->
+</div><!--/ rantsRaves-->
+<div id="CMSPOLLBOX" class="bx cmsPoll">
+<div class="cnrR3">
+<div class="lft"><!--Lft Corner--></div>
+<div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div id="CMSPOLL" class="bx-cell p8503">
+<dl>
+<dt>Today's Poll</dt>
+<dd>
+<form action="CMSPollController" name="CMSPollForm" id="CMSPollForm">
+<input type="hidden" name="pollid" value="8503"/>
+<input type="hidden" name="Action" value="vote"/>
+<input type="hidden" name="fromServlet" value="Home"/>
+<div class="questions">
+<div class="q8502">
+<div class="question">
+Are you concerned that the developing Hurricane Earl may affect your Labor Day weekend travel plans?
+</div>
+<div class="answers for2">
+<div class="answer rdoSet">
+<input id="q8502-a0" type="radio" name="radio8502" value="0">
+<label for="q8502-a0">Yes</label>
+</div>
+<div class="answer rdoSet">
+<input id="q8502-a1" type="radio" name="radio8502" value="1">
+<label for="q8502-a1">No</label>
+</div>
+</div>
+</div>
+</div>
+<div class="vote wrap">
+<div class="button"><a rel="nofollow" class="js_ajaxSubmit form_CMSPollForm tgt_CMSPOLLBOX method_get" href="CMSPollController">Vote Now</a></div>
+</div>
+</form>
+</dd>
+</dl>
+</div>
+</div>
+<div class="box typeB featured">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="homeHeader">Featured Traveler Photo</div>
+<div class="interior">
+<div class="cnrR3">
+<div class="lft"><!--Lft Corner--></div>
+<div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="photo">
+<a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/LocationPhotoDirectLink-g609158-d806038-i24681745-Ninety_Mile_Beach-Kaitaia_Northland_North_Island.html#24681745" class="js_popGallery pid887">
+<img src="/web/20100831163856im_/http://media-cdn.tripadvisor.com/media/photo-s/01/78/9d/11/fine-della-ninety-mile.jpg" alt="fine della Ninety Mile Beach, poco prima di Cape Reinga"/>
+</a>
+</div>
+</div><!--/ interior-->
+<cite class="caption">Ninety Mile Beach: North Island
+<span class="byline">Submitted by:
+<a rel="nofollow" class="username pid887" href="/web/20100831163856/http://www.tripadvisor.com/members-photos/alighieri76">alighieri76</a>
+</span>
+</cite>
+<div class="moreAbout"><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Attraction_Review-g609158-d806038-Reviews-Ninety_Mile_Beach-Kaitaia_Northland_North_Island.html" class="pid887">FIND OUT MORE ABOUT NINETY MILE BEACH</a></div>
+<div class="photoTwit">
+<a target="_blank" class="pid2179" rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/ShowUrl-a_arg0.Photo%2Bof%2BNinety%252BMile%252BBeach-a_arg1.via%2B%2540TripAdvisor-a_encodeArgs.1-a_tinyUrl0.http%3A__2F____2F__www__2E__tripadvisor__2E__com__2F__LocationPhotoDirectLink__2D__g609158__2D__d806038__2D__i24681745__2D__Ninety__5F__Mile__5F__Beach__2D__Kaitaia__5F__Northland__5F__North__5F__Island__2E__html%2324681745-a_url.http%3A__2F____2F__twitter__2E__com__2F__home__3F__status%3Darg0%3A+tinyUrl0+%28arg1%29-a_UsePlusForSpace.1-r0.html">Share on Twitter</a>
+</div>
+</div><!--/ box.typeB-->
+</div><!--/ #pollMix colgroup-->
+<div class="spotlightDest">
+<div class="interior">
+<div class="spotlightHeader">Spotlight destination</div>
+<div class="wrap">
+<div class="photo">
+<img src="/web/20100831163856im_/http://media-cdn.tripadvisor.com/media/photo-s/01/8b/47/f5/saratoga-springs.jpg" alt="Saratoga Springs"/>
+</div>
+<div class="spotlightText">
+<b>Saratoga Springs, NY</b> offers world-class thoroughbred horse racing, harness racing, polo, the Saratoga Battlefield, over 10 museums, Saratoga Performing Arts Center, renowned golf courses and more! Downtown Saratoga is a charming Victorian pedestrian setting with scenic surroundings, shopping, dining, and close proximity to everything Upstate New York has to offer!
+</div>
+</div>
+<div class="spotlightFooter">
+<span class="sdLeft">Description provided by:
+<a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/ShowUrl?url=www.discoversaratoga.org" target="_blank">Saratoga Convention & Tourism Bureau</a></span>
+<span class="sdRight">
+<a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g48562-Saratoga_Springs_New_York-Vacations.html">Read more about Saratoga Springs&#xa0;&#xbb;</a>
+</span>
+</div>
+</div>
+</div>
+<div class="box typeA2 col2">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="mid"><!--Mid Border--></div> <div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="interior">
+<div class="header">Quick Links</div>
+<div class="col">
+<ul>
+<li class="section"><b>Share your experiences</b> <ul class="arrows">
+<li><span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('Lqd',436)">Write a review</span></li> <li><span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('LqniEpa5iaV',0)">Ask a question or browse the forums</span></li> <li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/TravelHome" class="pid437">Write a Traveler Article</a></li> <li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/NewGoList" class="pid438">Create a Traveler List</a></li> </ul>
+</li>
+<li class="section"><b>Member preferences</b> <ul class="arrows">
+<li><span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('LqS',439)">Update your profile or subscriptions</span></li> </ul>
+</li>
+<li class="section"><b>Talk to us</b> <ul class="arrows">
+<li><span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('Lqo',0)">Send feedback or report a problem</span></li> </ul>
+</li>
+<li class="section"><b>Fun travel stories</b> <ul class="arrows">
+<li><a href="/web/20100831163856/http://tripwow.tripadvisor.com/">Make a slideshow</a> from your travel photos</li>
+<li><a rel="nofollow" class="pid769" href="/web/20100831163856/http://www.tripadvisor.com/TIQGame">Play Traveler IQ Game</a></li>
+<li><a rel="nofollow" target="_blank" href="/web/20100831163856/http://tripadvisor.wordpress.com/">Read the TripAdvisor Blog</a></li> </ul>
+</li>
+<li class="section"><b>For owners</b> <ul class="arrows">
+<li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/BusinessListings">Learn about Business Listings</a>&#xa0;<img class="stub" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="NEW!"/></li>
+<li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Owners">Visit your Owner Center</a></li> </ul>
+</li>
+</ul>
+</div><!--/ col-->
+<div class="col">
+<ul>
+<li class="section"><b>Browse by trip type</b> <ul class="arrows">
+<li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/BusinessCenter" class="pid1736">Business travel</a>&#xa0;<img class="stub" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="NEW!"/></li>
+<li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Inspiration-g1-c8-World.html" class="pid1737">Luxury travel</a></li>
+<li><a rel="nofollow" href="/web/20100831163856/http://www.tripadvisor.com/Inspiration-g1-c0-World.html" class="pid1738">Family travel</a></li>
+</ul>
+</li>
+<li class="section"><b>Partner Sites</b> <ul class="arrows">
+<li>Compare <a href="/web/20100831163856/http://www.bookingbuddy.com/" target="_blank">cheap flights</a> on Booking Buddy</li>
+<li>Plan a <a href="/web/20100831163856/http://www.cruisecritic.com/" target="_blank">cruise</a> with Cruise Critic</li>
+<li>Read <a href="/web/20100831163856/http://www.smartertravel.com/travel-guides/" target="_blank">travel guides</a> at SmarterTravel</li>
+<li>Get <a href="/web/20100831163856/http://www.seatguru.com/" target="_blank">airline seating charts</a> on Seat Guru</li>
+<li>Find <a href="/web/20100831163856/http://www.airfarewatchdog.com/" target="_blank">airfare deals</a> at Airfarewatchdog</li>
+<li>Share <a href="/web/20100831163856/http://www.virtualtourist.com/" target="_blank">travel tips</a> at VirtualTourist</li>
+<li>Create a <a href="/web/20100831163856/http://www.travelpod.com/" target="_blank">travel blog</a> on TravelPod</li>
+<li>Find <a href="/web/20100831163856/http://www.flipkey.com/" target="_blank">vacation rentals</a> on FlipKey</li>
+<li>Plan a <a href="/web/20100831163856/http://www.familyvacationcritic.com/" target="_blank">family vacation</a> on Family Vacation Critic</li>
+</ul>
+</li>
+</ul>
+</div><!--/ col-->
+</div><!--/ interior-->
+</div><!--/ box.typeA2.col2-->
+<div class="box typeA deals">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="mid"><!--Mid Border--></div> <div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="interior xxb">
+<div class="header"><strong>Hotels in popular destinations:</strong></div>
+<div class="paragraph">Whether you prefer worldwide hotel chains or cozy boutique hotels, you'll find real hotel reviews you can trust at TripAdvisor. Millions of travelers have shared their candid reviews of hotels, bed & breakfasts, inns, and more. Add your travel reviews and help travelers around the world plan and have a great trip.</div>
+<ul class="first">
+<li><b>United States &amp; Canada</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60898-Atlanta_Georgia-Hotels.html">Atlanta hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g29750-Atlantic_City_New_Jersey-Hotels.html">Atlantic City hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60745-Boston_Massachusetts-Hotels.html">Boston hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g35805-Chicago_Illinois-Hotels.html">Chicago hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g55711-Dallas_Texas-Hotels.html">Dallas hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g29092-Anaheim_California-Hotels.html">Disneyland - Anaheim hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g34515-Orlando_Florida-Hotels.html">Disneyworld - Orlando hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60982-Honolulu_Oahu_Hawaii-Hotels.html">Honolulu hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g34345-Key_West_Florida_Keys_Florida-Hotels.html">Key West hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g45963-Las_Vegas_Nevada-Hotels.html">Las Vegas hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g32655-Los_Angeles_California-Hotels.html">Los Angeles hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g29220-Maui_Hawaii-Hotels.html">Maui hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g34438-Miami_Florida-Hotels.html">Miami hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60864-New_Orleans_Louisiana-Hotels.html">New Orleans hotels</a></li> </ul>
+<ul>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60763-New_York_City_New_York-Hotels.html">New York City hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60795-Philadelphia_Pennsylvania-Hotels.html">Philadelphia hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g31310-Phoenix_Arizona-Hotels.html">Phoenix hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60750-San_Diego_California-Hotels.html">San Diego hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60713-San_Francisco_California-Hotels.html">San Francisco hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g60878-Seattle_Washington-Hotels.html">Seattle hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g155019-Toronto_Ontario-Hotels.html">Toronto hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g154943-Vancouver_British_Columbia-Hotels.html">Vancouver hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g28970-Washington_DC_District_of_Columbia-Hotels.html">Washington DC hotels</a></li> <li><b>Europe</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g188590-Amsterdam_Noord_Holland-Hotels.html">Amsterdam hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187497-Barcelona_Catalonia-Hotels.html">Barcelona hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187323-Berlin-Hotels.html">Berlin hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g186605-Dublin_County_Dublin-Hotels.html">Dublin hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187895-Florence_Tuscany-Hotels.html">Florence hotels</a></li> </ul>
+<ul>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187337-Frankfurt_Hesse-Hotels.html">Frankfurt hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g186338-London_England-Hotels.html">London hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187514-Madrid-Hotels.html">Madrid hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187309-Munich_Bavaria-Hotels.html">Munich hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187147-Paris_Ile_de_France-Hotels.html">Paris hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187791-Rome_Lazio-Hotels.html">Rome hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g187870-Venice_Veneto-Hotels.html">Venice hotels</a></li> <li><b>Caribbean/Mexico</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g150807-Cancun_Yucatan_Peninsula-Hotels.html">Cancun hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g147288-Dominican_Republic-Hotels.html">Dominican Republic hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g147309-Jamaica-Hotels.html">Jamaica hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g150800-Mexico_City_Central_Mexico_and_Gulf_Coast-Hotels.html">Mexico City hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g150812-Playa_del_Carmen_Yucatan_Peninsula-Hotels.html">Playa del Carmen hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g147290-Puerto_Plata_Dominican_Republic-Hotels.html">Puerto Plata hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g147319-Puerto_Rico-Hotels.html">Puerto Rico hotels</a></li> </ul>
+<ul>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g147293-Punta_Cana_Dominican_Republic-Hotels.html">Punta Cana hotels</a></li> <li><b>Asia/Pacific &amp; Australia</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g294226-Bali-Hotels.html">Bali hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g293916-Bangkok-Hotels.html">Bangkok hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g294212-Beijing-Hotels.html">Beijing hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g294217-Hong_Kong_Hong_Kong_Region-Hotels.html">Hong Kong hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g294265-Singapore-Hotels.html">Singapore hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g255060-Sydney_New_South_Wales-Hotels.html">Sydney hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g298184-Tokyo_Tokyo_Prefecture_Kanto-Hotels.html">Tokyo hotels</a></li> <li><b>Africa/Middle East</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g295424-Dubai-Hotels.html">Dubai hotels</a></li> <li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g297555-Sharm_El_Sheikh_South_Sinai_Red_Sea_and_Sinai-Hotels.html">Sharm El Sheikh hotels</a></li> <li><b>Central/South America</b></li>
+<li><a href="/web/20100831163856/http://www.tripadvisor.com/Hotels-g312741-Buenos_Aires_Capital_Federal_District-Hotels.html">Buenos Aires hotels</a></li> </ul>
+</div><!--/ interior-->
+</div><!--/ box.typeA.deals-->
+<div class="box typeA deals">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="mid"><!--Mid Border--></div> <div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="interior xxb">
+<div class="header"><strong>Top Destinations:</strong></div>
+<div class="paragraph">Planning a trip? Come to TripAdvisor first. TripAdvisor's travel community has written millions of reviews describing their best and worst vacations, so you can decide where to go and what to avoid. Our free destination guides collect helpful traveler suggestions and photos to guide you.</div>
+<div class="featured">
+<div class="header">Featured Destinations:</div>
+<a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187497-Barcelona_Catalonia-Vacations.html">Barcelona</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147309-Jamaica-Vacations.html">Jamaica</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g45963-Las_Vegas_Nevada-Vacations.html">Las Vegas</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g155032-Montreal_Quebec-Vacations.html">Montreal</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g34515-Orlando_Florida-Vacations.html">Orlando</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html">Paris</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g274707-Prague_Bohemia-Vacations.html">Prague</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g150793-Puerto_Vallarta_Pacific_Coast-Vacations.html">Puerto Vallarta</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187791-Rome_Lazio-Vacations.html">Rome</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g60713-San_Francisco_California-Vacations.html">San Francisco</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g255060-Sydney_New_South_Wales-Vacations.html">Sydney</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187870-Venice_Veneto-Vacations.html">Venice</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/myrtle-beach-vacation-rentals.html">Myrtle Beach Vacation Rentals</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/VacationRentals-g55270-Reviews-Pigeon_Forge_Tennessee-Vacation_Rentals.html">Pigeon Forge Cabins</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/outer-banks-vacation-rentals.html">Outer Banks Vacation Rentals</a> </div>
+<div class="featured">
+<div class="header">Best Beach Vacations:</div>
+<a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g150787-Acapulco_Pacific_Coast-Vacations.html">Acapulco</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147247-Aruba-Vacations.html">Aruba</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147414-Bahamas-Vacations.html">Bahamas</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147255-Bermuda-Vacations.html">Bermuda</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147288-Dominican_Republic-Vacations.html">Dominican Republic</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g28932-Hawaii-Vacations.html">Hawaii</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g29220-Maui_Hawaii-Vacations.html">Maui</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g34439-Miami_Beach_Florida-Vacations.html">Miami Beach</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g150812-Playa_del_Carmen_Yucatan_Peninsula-Vacations.html">Playa del Carmen</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147319-Puerto_Rico-Vacations.html">Puerto Rico</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147293-Punta_Cana_Dominican_Republic-Vacations.html">Punta Cana</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g147400-U_S_Virgin_Islands-Vacations.html">U.S. Virgin Islands</a> </div>
+<div class="featured">
+<div class="header">Trip to Europe:</div>
+<a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g190410-Austria-Vacations.html">Austria</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g188634-Belgium-Vacations.html">Belgium</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187070-France-Vacations.html">France</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187275-Germany-Vacations.html">Germany</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g189398-Greece-Vacations.html">Greece</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g186591-Ireland-Vacations.html">Ireland</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187768-Italy-Vacations.html">Italy</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g189100-Portugal-Vacations.html">Portugal</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g187427-Spain-Vacations.html">Spain</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g188045-Switzerland-Vacations.html">Switzerland</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g188553-The_Netherlands-Vacations.html">The Netherlands</a> | <a href="/web/20100831163856/http://www.tripadvisor.com/Tourism-g186216-United_Kingdom-Vacations.html">United Kingdom</a> </div>
+</div><!--/ interior-->
+</div><!--/ box.typeA.deals-->
+<div class="box typeA deals">
+<div class="cnrR5">
+<div class="lft"><!--Lft Corner--></div>
+<div class="mid"><!--Mid Border--></div> <div class="rgt"><!--Rgt Corner--></div>
+</div>
+<div class="interior xxb">
+<div class="header"><strong>The World's Most Trusted Travel Advice</strong></div>
+<div class="paragraph">Find and book a convenient and comfortable hotel, or find a vacation rental for a memorable getaway. TripAdvisor's Flight Search checks thousands of possible itineraries and finds you the lowest fares the most often of any online flight finder. Download a free, full-color destination guide for travelers' honest advice on where to stay, eat, and play. Visit our busy travel forums and get all your questions answered before you go.</div>
+</div><!--/ interior-->
+</div><!--/ box.typeA.deals-->
+</div><!--/ balance-->
+</div><!--/ gridA-->
+</div><!--/ HOMEPAGE-->
+<div id="FOOT">
+<div class="corporate">
+<div class="col sidebar">
+<div class="block">
+<dl class="about">
+<dt>About TripAdvisor&#174;</dt> <dd> TripAdvisor&#174; provides recommendations for hotels, resorts, inns, vacations, travel packages, vacation packages, travel guides and lots more.</dd>
+</dl>
+</div><!--/ block-->
+</div><!--/ col.sidebar-->
+<div class="col balance">
+<div class="block">
+<dl class="sep brand">
+<dt>
+<img class="sprite-identityFOOT" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="TripAdvisor"/>
+</dt>
+<dd class="meta">Recommendations for hotels, resorts, inns, vacations, travel packages, travel guides and lots more!</dd>
+</dl>
+<dl class="sep flags">
+<dt>Select a TripAdvisor site:</dt>
+<dd>
+<ul id="FLAGS">
+<li>
+<a id="flag_uk" class="flag_uk js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.co.uk/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_ca" class="flag_ca js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.ca/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_it" class="flag_it js_noTAPD" title="Recensioni imparziali di hotel, destinazioni turistiche e soggiorni" href="/web/20100831163856/http://www.tripadvisor.it/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Recensioni imparziali di hotel, destinazioni turistiche e soggiorni"/></a>
+</li>
+<li>
+<a id="flag_es" class="flag_es js_noTAPD" title="Críticas imparciales de hoteles, complejos turísticos y vacaciones" href="/web/20100831163856/http://www.tripadvisor.es/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Críticas imparciales de hoteles, complejos turísticos y vacaciones"/></a>
+</li>
+<li>
+<a id="flag_de" class="flag_de js_noTAPD" title="Unvoreingenommene Bewertungen von Hotels, Resorts und Urlaubsaufenthalten" href="/web/20100831163856/http://www.tripadvisor.de/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unvoreingenommene Bewertungen von Hotels, Resorts und Urlaubsaufenthalten"/></a>
+</li>
+<li>
+<a id="flag_fr" class="flag_fr js_noTAPD" title="Critiques impartiales d'hôtels, clubs et séjours" href="/web/20100831163856/http://www.tripadvisor.fr/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Critiques impartiales d'hôtels, clubs et séjours"/></a>
+</li>
+<li>
+<a id="flag_ja" class="flag_ja js_noTAPD" title="ホテル" href="/web/20100831163856/http://www.tripadvisor.jp/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="ホテル"/></a>
+</li>
+<li>
+<a id="flag_cn" class="flag_cn js_noTAPD" title="对酒店，度假村，度假的公平点评" href="/web/20100831163856/http://www.daodao.com/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="对酒店，度假村，度假的公平点评"/></a>
+</li>
+<li>
+<a id="flag_in" class="flag_in js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.in/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_sv" class="flag_sv js_noTAPD" title="Objektiva omdömen om hotell, hotellområden och semestrar" href="/web/20100831163856/http://www.tripadvisor.se/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Objektiva omdömen om hotell, hotellområden och semestrar"/></a>
+</li>
+<li>
+<a id="flag_nl" class="flag_nl js_noTAPD" title="Onpartijdige beoordelingen van hotels, resorts en vakanties" href="/web/20100831163856/http://nl.tripadvisor.com/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Onpartijdige beoordelingen van hotels, resorts en vakanties"/></a>
+</li>
+<li>
+<a id="flag_pt" class="flag_pt js_noTAPD" title="Comentários imparciais sobre hotéis, resorts e férias" href="/web/20100831163856/http://www.tripadvisor.com.br/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Comentários imparciais sobre hotéis, resorts e férias"/></a>
+</li>
+<li>
+<a id="flag_tr" class="flag_tr js_noTAPD" title="Oteller, tatil köyleri ve tatiller hakkında tarafsız yorumlar" href="/web/20100831163856/http://www.tripadvisor.com.tr/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Oteller, tatil köyleri ve tatiller hakkında tarafsız yorumlar"/></a>
+</li>
+<li>
+<a id="flag_da" class="flag_da js_noTAPD" title="Upartiske anmeldelser af hoteller, feriesteder og ferier" href="/web/20100831163856/http://www.tripadvisor.dk/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Upartiske anmeldelser af hoteller, feriesteder og ferier"/></a>
+</li>
+<li>
+<a id="flag_mx" class="flag_mx js_noTAPD" title="Críticas imparciales de hoteles, complejos turísticos y vacaciones" href="/web/20100831163856/http://www.tripadvisor.com.mx/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Críticas imparciales de hoteles, complejos turísticos y vacaciones"/></a>
+</li>
+<li>
+<a id="flag_ie" class="flag_ie js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.ie/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_au" class="flag_au js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.com.au/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_sg" class="flag_sg js_noTAPD" title="Unbiased reviews of hotels, resorts and holidays" href="/web/20100831163856/http://www.tripadvisor.com.sg/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Unbiased reviews of hotels, resorts and holidays"/></a>
+</li>
+<li>
+<a id="flag_ko" class="flag_ko js_noTAPD" title="호텔,리조트,여행에 관한 공정한 리뷰" href="/web/20100831163856/http://www.tripadvisor.co.kr/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="호텔,리조트,여행에 관한 공정한 리뷰"/></a>
+</li>
+<li>
+<a id="flag_no" class="flag_no js_noTAPD" title="Objektive anmeldelser av hotell, feriesteder og ferier" href="/web/20100831163856/http://no.tripadvisor.com/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Objektive anmeldelser av hotell, feriesteder og ferier"/></a>
+</li>
+<li>
+<a id="flag_pl" class="flag_pl js_noTAPD" title="Bezstronne recenzje hoteli, kurortów i wakacji" href="/web/20100831163856/http://pl.tripadvisor.com/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="Bezstronne recenzje hoteli, kurortów i wakacji"/></a>
+</li>
+<li>
+<a id="flag_th" class="flag_th js_noTAPD" title="รีวิวที่เป็นกลางสำหรับโรงแรม รีสอร์ท และวันหยุดพักผ่อน" href="/web/20100831163856/http://th.tripadvisor.com/"><img class="flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/sprites/posFlags-V2.gif" alt="รีวิวที่เป็นกลางสำหรับโรงแรม รีสอร์ท และวันหยุดพักผ่อน"/></a>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="sep internal">
+<span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('LzFLJHipIQptB')">About Us</span> |
+<span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('Lqd')">Write a review</span> |
+<span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('LxIL')">Careers</span> | <span class="fkLnk hvrIE6" onClick="ta.util.cookie.setPIDCookie(432);ta.util.ASDF.asdf('LqS')">Membership</span> | <span><a href="/web/20100831163856/http://www.tripadvisor.com/pages/site_map_lodging.html">Site Map</a></span> | <span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('LbTTScSJIVt')">Become an Affiliate</span> | <span><a href="/web/20100831163856/http://www.tripadvisor.com/pages/top200.html">Top Cities</a></span>
+| <span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdfPopup('PFnJTV2EVtt8LzS')">TripAdvisor&#8482; Gear</span>
+| <span class="fkLnk hvrIE6" onClick="ta.util.cookie.setPIDCookie(1507);ta.util.ASDF.asdf('LzuVEtfGiSnV')">Travelers' Choice</span> | <span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('LqN')">Owners</span> | <span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdfPopup('Lqo')">Help Center</span>
+| <span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('L7ptSCVttRStISCyt')">Business Listings</span> | <span class="fkLnk hvrIE6" onClick="ta.util.ASDF.asdf('LqN')">DMO/CVB</span> </div>
+<div class="sep legal">
+<div class="copyright">
+© 2010 TripAdvisor LLC All rights reserved. TripAdvisor <span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('LzFLIVEatB')">Terms of Use</span> and <span class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdf('LzFL2ESsJngB')">Privacy Policy</span>.</div>
+<div class="disclaimer">
+* TripAdvisor LLC is not a booking agent and does not charge any service fees to users of our site... (<span id="TERMS" class="fkLnk hvrIE6" onclick="ta.util.ASDF.asdfPopupTerms('LzFL2ESnSCyQIVEatB')">more</span>) </div>
+<div class="disclaimer">TripAdvisor LLC is not responsible for content on external web sites. Taxes, fees not included for deals content.</div>
+</div>
+</div> </div> </div>
+</div>
+<div id="USER_PREFS" class="prfs">
+<ul class="opts">
+<li class="optItem fbConnect">
+<fb:login-button v="2" size="small" onlogin="ta.util.cookie.setPIDCookie(1882);ta.overlays.registration.connectFB(null, null, 'MASTHEAD')">Sign&nbsp;in&nbsp;with&nbsp;Facebook</fb:login-button>
+</li>
+<li class="optItem login"><span class="fkLnk hvrIE6" onClick="ta.util.cookie.setPIDCookie(429);ta.overlays.registration.connect({flow: 'MASTHEAD'}, 'SIGNIN');">Sign in</span></li>
+<li id="register" class="optItem register flyoutX" onclick="ta.util.cookie.setPIDCookie(427); ta.overlays.registration.connect({flow: 'MASTHEAD'}, 'SIGNUP');"><span class="fkLnk hvrIE6">Register Now!</span>
+<li id="INTLPOP" class="optItem intSites last" onclick="ta.call('ta.common.flyout.intlPopup', event, this)"><span class="sprite-arrowDn arrowDn"><img class="sprite-flag" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif" alt="International Sites" title="International Sites"/></span></li> </ul> </div> </div>
+<div id="tamgFooter" class="tamgFooterShell">
+<div class="tamgFooter sprite-BarBk">
+<!--Close button--><div class="extRight ecs"><div class="extRightBtn" onclick="setTAMGFooterCookie('Yes'); return false;"><div class="xBtn sprite-X"></div></div></div><!--More great sites--><div class="extRight mgs"><div class="extRightBtn" onclick="_openOverlay();">See all sites</div></div>
+<div class="tamgBar" style="height: 27px;">
+<div class="siteBtn">
+<div class="siteBtnImg TA sprite-TA"></div>
+</div>
+<div class="clBoth"></div>
+</div>
+</div>
+</div>
+<div id="tamgFooterBackdrop" class="tamgFooterBackdrop" style="display: none;"></div>
+<div id="tamgFooterOverlay" class="tamgFooterOverlayShell" style="display: none;"></div>
+<script type="text/javascript">
+var ajaxDomain = "http://" + document.domain;
+</script>
+<script type="text/javascript">
+ta.queueForLoad( function() { setTimeout( function() { Cookie.writeSession('TFDC', '1'); }, 500 ) } );
+</script>
+<div id="FTR_TO_DIV" class="tamgFtr_Takeover" style="" onmouseover="return ta.call('ta.overlays.Factory.relAboveTAMGFooter', event, this);">
+<div id="FTR_TO_BTN" class="ftrBtn ftrWof">
+<span style="font:normal 12px Verdana,Arial,sans-serif;text-decoration:none;" class="fkLnk hvrIE6" onclick="if(ta.util){ ta.util.ASDF.asdf('LrES2qnESVCMtWVqg','3547')}">Find your Facebook friends here!</span>
+</div>
+<div class="overlayContents">
+<div class="overlayHdr">
+Get trip advice from your friends </div>
+<p>
+<img class="inlineFBLogo sprite-ftr-wof-fblogo" height="16" width="16" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif"/> Discover the places your friends have visited around the world.
+</p>
+<div class="wrap">
+<div class="button org">
+<span onclick="if(ta.util){ ta.util.ASDF.asdf('LrES2qnESVCMtWVqg','3561')}">Go</span>
+</div>
+</div>
+<img alt="" class="sprite-ftr-wof-arrow" height="13" width="18" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif"/>
+</div>
+<img alt="" onmouseover="$('FTR_TO_BTN').addClass('hvrd')" onmouseout="$('FTR_TO_BTN').removeClass('hvrd')" class="luft-plane sprite-ftr-wof-pix" height="57" width="141" src="/web/20100831163856im_/http://cdn.tripadvisor.com/img2/x.gif"/>
+</div>
+<script type="text/javascript">
+var lazyImgs = [
+{ id: 'lazyload_UNIQUE_0', src: '/web/20100831163856/http://ad.doubleclick.net/ad/N4764.TripAdvisor/B4698670.4;sz=1x1?rnd=65968', scroll: false }
+]
+var lazyHtml = [
+]
+var lazyloader = new LazyLoad({ range: 200 }, lazyImgs, lazyHtml);
+</script>
+<script type="text/javascript">
+ta.store('facebook.apiKey', "98e1fc4356ac6f65ce1254859e1fcd2b");
+ta.keep('facebook.onAvail', function () {
+$$('.fbLikeButton').each(function (n) {
+var layout = "standard";
+try {
+if (n.parentNode.parentNode.getAttribute('id') == "homepageLikeButton") layout = "button_count";
+} catch (e) { }
+var parent = n.parentNode;
+var iframe = document.createElement("iframe");
+iframe.setAttribute("id", "fbLikeButton");
+iframe.setAttribute("class", "like-iframe");
+iframe.setAttribute("scrolling", "no");
+iframe.setAttribute("frameBorder", "0");
+var url = n.childNodes[0].data;
+iframe.setAttribute("src", "/web/20100831163856/http://www.facebook.com/widgets/like.php?href=" + encodeURIComponent(url.replace(/^\s*/, "").replace(/\s*$/, "")) + "&width=300&height=23&show_faces=False&layout=" + layout);
+parent.insertBefore(iframe, n);
+parent.removeChild(n);
+});
+var styleElement = document.createElement('style');
+styleElement.type = 'text/css';
+styleElement.id   = 'facebookLikeButton';
+document.getElementsByTagName('head')[0].appendChild(styleElement);
+var styleText = "#homepageLikeButton { display: block; } #fbLikeButton { display: inline; }";
+if (window.isIE) {
+if (fIEVersion < 7) {
+// this is horrible, but IE6 doesn't seem to pay attention otherwise
+styleText += " h1#HEADING.fbShowLike { display: inline !important; }";
+}
+if (fIEVersion < 8)
+{
+styleText += "#fbLikeButton {height:27px;}";
+}
+styleElement.styleSheet.cssText = styleText;
+} else {
+styleElement.appendChild(document.createTextNode(styleText));
+}
+});
+ta.store('page.geo', "");
+ta.store('page.location', "");
+ta.store('pending.ignore.facebook', true);
+ta.store('pending.callback.facebook', function(){
+ta.support.Facebook.setup(function(){
+ta.support.Facebook.markAvailable();
+ta.support.Facebook.checkSession();
+});
+});
+ta.queueForLoad(function(){
+new Asset.javascript("/web/20100831163856/http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php");
+ta.util.pending.waitForFn('facebook', 'FB_RequireFeatures');
+});
+function getFBCookieVal() {
+var fbInHist = sniffFacebook();
+var fbCookieVal = 2;
+if( fbInHist ) {
+fbCookieVal = 1;
+}
+return fbCookieVal;
+}
+ta.queueForLoad( function() { setTimeout( function() { Cookie.writeSession('FBH', getFBCookieVal()); }, 500 ) } );
+</script>
+<div id="FB_HiddenContainer" style="position:absolute; top:-10000px; left:-10000px; width:0px; height:0px"></div>
+</body>
+<!-- st: 78 dc: 0 sc: 5 -->
+</html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 16:38:56 Aug 31, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:32:57 Feb 9, 2016.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
