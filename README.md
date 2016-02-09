@@ -1,9 +1,11 @@
 # WaybackMachine
 
 Compile: 
+
   javac WaybackMachine.java
 
 Run:
+
   java WaybackMachine
   
 Examples:
