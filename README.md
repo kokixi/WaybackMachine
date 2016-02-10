@@ -1,30 +1,50 @@
 # WaybackMachine
 
-WaybackMachine that retrieves the state of website in the past according to a given date. If there's a version for this data, that version of the website will be shown. If not, a version of the previous nearest date will be returned.
+Mock of a Wayback Machine that retrieves the state of a website in a given date. If there's a version for that exact date, it would be displayed. Otherwise, the closest version prior to that time will be shown.
 
-To do this, we assume that data provided by the crawler came in the following way:
+## How it works
+
+We assume data provided by the crawler comes in the following format:
 ```json
 [
     {
         url:"www.tripadvisor.com", 
-        date:"134624589",
+        date:"2006-01-01",
         data:[<checksum>,<Web html>]
     },...
 ]
 ```
 
-For this example, we will mock the crawler and hardcode some data to work with.
+In this project, I am mocking the crawler and hardcoding some pages to work with.
 
-We'll store the data provided by the crawler in a hash in the following way: 
-```java
-  HashMap<String, ArrayList<VersionDomain> > domains;
+Data provided by the crawler is cached in the following structure:
 ```
-Where the key is the domain of the website, and the value is an array with all the version available for that domain.
+{
+  urlMD5 : [
+    {
+        date,
+        checksum
+    },
+    ...
+  ] 
+}
+```
+Date are sorted by ascending order to facilitate the search as mentioned below.
 
-To retrieve the nearest date from the array, we use a binary search which give us the result in O(logn).
+The structure in java looks like this:
 
-Also, to improve the performance of the wayback machine, we have implemented a cache where we are going to store the last five domain accesed. 
+```java
+HashMap<String, ArrayList<UrlVersion> > urls;
+```
+where the key is the url of the website, and the value is an array with all the versions available for that url.
 
+### Performance considerations
+
+To retrieve the nearest date from the array, we use a **binary search which give us the result in O(logn).**
+
+Also, to improve the performance of the wayback machine, I have implemented a very rudimentary cache where the latest five urls are kept in memory for fastest access. This is a round robin list where the least accessed url is deleted on behalf of the newly accessed one.
+
+## How to run it
 Compile: 
 
 ```java
@@ -34,6 +54,7 @@ Run:
 ```java
   java WaybackMachine
 ```
+
 Examples:
 
 www.google.com              2009-02-04
