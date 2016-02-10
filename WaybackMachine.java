@@ -22,7 +22,7 @@ public class WaybackMachine {
         websites = new WayBackMachineStore();
 
         //Populate websites information
-        populateData();
+        mockCrawler();
 
         //Create server
         int port = 8000;
@@ -36,11 +36,12 @@ public class WaybackMachine {
     }
 
     /**
-     * Populate websites information into the WayBackMachineStore object
+     * Mock the data provided by the crawler
+     * @throws Exception
      */
 
 
-    public static void populateData() {
+    public static void mockCrawler() throws Exception {
 
         websites.insert("www.google.com", "2009-02-04", "f2d787451893fcf10385142f8d44fc7b");
         websites.insert("www.tripadvisor.com", "2006-01-06", "c9da795bf9d8c797dccec7ef41f3fa13");
@@ -75,10 +76,14 @@ public class WaybackMachine {
 
                     url = queryParams.get("url");
                     date = queryParams.get("date");
+
                     try {
 
-                        String nearestDate = websites.getNearestDate(url, date);
-                        webURL = "/content?url=" + url + "&date=" + nearestDate;
+                        String urlMD5 = WayBackMachineStore.toMD5(url);
+                        String dateTimestamp = WayBackMachineStore.getTimestamp(date);
+
+                        String nearestDate = websites.getNearestDate(urlMD5, dateTimestamp);
+                        webURL = "/content?url=" + urlMD5 + "&date=" + dateTimestamp;
 
                     } catch(Exception e){
                         errorMsg = e.getMessage();
@@ -101,6 +106,7 @@ public class WaybackMachine {
          * @return hash with all the key-value pairs.
          */
         public Map<String, String> queryToMap(String query) {
+
             Map<String, String> result = new HashMap<String, String>();
 
             if(query != null) {
@@ -226,7 +232,7 @@ public class WaybackMachine {
      */
     static class WayBackMachineStore {
 
-        private HashMap<String, ArrayList<VersionDomain> > domains = new HashMap<>();
+        private HashMap<String, ArrayList<UrlVersion> > urls = new HashMap<>();
 
         /**
          * Insert a new website
@@ -234,18 +240,18 @@ public class WaybackMachine {
          * @param date
          * @param checksum
          */
-        public void insert(String url, String date, String checksum) {
-            if(domains.containsKey(url)) {
-                ArrayList<VersionDomain> urlVersions = domains.get(url);
+        public void insert(String url, String date, String checksum) throws Exception {
+            if(urls.containsKey(url)) {
+                ArrayList<UrlVersion> urlVersions = urls.get(url);
                 if(!urlVersions.get(urlVersions.size()-1).checksum.equals(checksum)) {
-                    VersionDomain vd = new VersionDomain(date, checksum);
+                    UrlVersion vd = new UrlVersion(getTimestamp(date), checksum);
                     urlVersions.add(vd);
                 }
             } else {
-                ArrayList<VersionDomain> urlVersions = new ArrayList<>();
-                VersionDomain vd = new VersionDomain(date, checksum);
+                ArrayList<UrlVersion> urlVersions = new ArrayList<>();
+                UrlVersion vd = new UrlVersion(getTimestamp(date), checksum);
                 urlVersions.add(vd);
-                domains.put(url, urlVersions);
+                urls.put(toMD5(url), urlVersions);
             }
         }
 
@@ -262,7 +268,7 @@ public class WaybackMachine {
 
             if(url != null && date != null) {
                 String nearestDate = getNearestDate(url, date);
-                file = "./data/" + toMD5(url) + "/" + getTimestamp(nearestDate) + ".html";
+                file = "./data/" + url + "/" + nearestDate + ".html";
             }
 
             return file;
@@ -275,11 +281,11 @@ public class WaybackMachine {
          * @return nearest date
          * @throws Exception throw exception if the url is not found or there is no version available for the given date
          */
-        public String getNearestDate(String url, String date) throws Exception{
+        public String getNearestDate(String url, String date) throws Exception {
 
-            if(domains.containsKey(url)) {
+            if(urls.containsKey(url)) {
 
-                ArrayList<VersionDomain> versions = domains.get(url);
+                ArrayList<UrlVersion> versions = urls.get(url);
                 if(versions.get(0).date.compareTo(date) <= 0) {
                     int min = 0;
                     int max = versions.size();
@@ -311,7 +317,7 @@ public class WaybackMachine {
                 }
 
             } else {
-                throw new Exception("Domain not found");
+                throw new Exception("Url not found");
             }
 
         }
@@ -341,45 +347,45 @@ public class WaybackMachine {
         }
 
         /**
-         * Convert a domain to MD5
-         * @param  domain
-         * @return MD5 value for the given domain
+         * Convert a url to MD5
+         * @param  url
+         * @return MD5 value for the given url
          * @throws Exception
          */
 
-        public static String toMD5(String domain) throws Exception {
+        public static String toMD5(String url) throws Exception {
 
-            StringBuffer domainBuffer = new StringBuffer();
+            StringBuffer urlBuffer = new StringBuffer();
 
             try{
 
-                byte[] domainBytes = domain.getBytes();
+                byte[] urlBytes = url.getBytes();
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
-                byte[] domainMD5 = md.digest(domainBytes);
+                byte[] urlMD5 = md.digest(urlBytes);
 
-                for (byte b : domainMD5) {
-                    domainBuffer.append(String.format("%02x", b & 0xff));
+                for (byte b : urlMD5) {
+                    urlBuffer.append(String.format("%02x", b & 0xff));
                 }
 
             }catch(Exception e){
                 throw e;
             }
 
-            return domainBuffer.toString();
+            return urlBuffer.toString();
         }
 
     }
 
     /**
-     * Class to store date and checksum of every domain
+     * Class to store date and checksum of every url
      */
 
-    static class VersionDomain {
+    static class UrlVersion {
         public String date;
         public String checksum;
 
-        public VersionDomain(String d, String ck) {
+        public UrlVersion(String d, String ck) {
             date = d;
             checksum = ck;
         }
@@ -407,7 +413,8 @@ public class WaybackMachine {
             if(recentSites.size() < 5)
                 recentSites.add(site);
             else {
-                recentSites.add(4, site);
+                sortRecent(4);
+                recentSites.add(0, site);
             }
         }
 
